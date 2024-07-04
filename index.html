@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trois Champs-Élysées - French Fine Dining</title>
+    <meta name="description" content="Experience exquisite French fine dining at Trois Champs-Élysées. Savor gourmet cuisine, elegant ambiance, and exceptional service. Reserve your table today.">
+    <link rel="icon" type="image/x-icon" href="/imgs/logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+
+    <script
+      src="https://kit.fontawesome.com/d18c999477.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="../imgs/logo.png" alt="Bootstrap" width="48" height="48" />
+        </a>
+
+        <!-- Navbar Toggler -->
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- SideBar -->
+        <div
+          class="sidebar offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <!-- Sidebar Header -->
+          <div class="offcanvas-header text-white border-bottom">
+            <h6 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Trois Champs-Élysées
+            </h6>
+            <button
+              type="button"
+              class="btn-close btn-close-white shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Sidebar Body -->
+          <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+            <ul
+              class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+            >
+              <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="/html/menu.html">Menu</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="/html/gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="/html/about.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Reservation Btn -->
+            <div
+              class="d-flex justify-content-center align-items-center flex-column flex-lg-row"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-toggle="modal"
+                data-bs-target="#reservation-modal"
+              >
+                Reservation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Reservation Modal -->
+
+    <div
+      class="modal fade justify-content-center"
+      id="reservation-modal"
+      tabindex="-1"
+      aria-labelledby="reservation-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-black">
+          <div class="modal-header container border-0 pt-5">
+            <button
+              type="button"
+              class="btn-close btn-close-white close"
+              aria-label="Close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body container pt-5">
+            <img class="reservation-line" src="../imgs/reservation-line.svg" />
+            <div class="row">
+              <h6
+                class="modal-title text-uppercase text-secondary"
+                id="modal-title"
+              >
+                Trois Champs-Élysées
+              </h6>
+            </div>
+            <div class="row pt-5 mt-5">
+              <div class="col-10 col-lg-4">
+                <p class="reservation-form-header">Make a Reservation</p>
+                <div class="contactForm">
+                  <form action="">
+                    <div class="row">
+                      <!-- DatePicker -->
+                      <div class="my-0">
+                        <div class="inputBox inputWithIcon">
+                          <input type="date" required="required" name="date" />
+                          <label class="fw-bolder covered-label" for="date"
+                            >Date</label
+                          >
+                          <div class="default-cover"></div>
+                          <i class="bi bi-calendar inputIcon"></i>
+                          <span class="cover"
+                            ><i class="bi bi-chevron-down"></i
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- TimePicker -->
+                    <div class="row">
+                      <div class="my-0">
+                        <div class="inputBox inputWithIcon">
+                          <input type="time" required="required" name="time" />
+                          <label class="fw-bolder covered-label" for="time"
+                            >Time</label
+                          >
+                          <div class="default-cover"></div>
+                          <div class="default-cover"></div>
+                          <i class="bi bi-clock inputIcon"></i>
+                          <span class="cover"
+                            ><i class="bi bi-chevron-down"></i
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="row">
+                      <div class="my-0">
+                        <div class="inputBox inputWithIcon">
+                          <input
+                            type="text"
+                            required="required"
+                            name="contact-number"
+                          />
+                          <label class="fw-bolder" for="contact-number"
+                            >Contact No.</label
+                          >
+                          <i class="bi bi-telephone inputIcon"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Party Size -->
+                    <div class="row">
+                      <div class="mb-5">
+                        <div class="inputBox inputWithIcon">
+                          <input
+                            type="text"
+                            required="required"
+                            name="party-size"
+                          />
+                          <label class="fw-bolder" for="party-size"
+                            >Party Size</label
+                          >
+                          <i class="bi bi-person-add inputIcon"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="btn btn-outlined">Book Now</button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Location Information -->
+              <div class="col-lg-5 ms-lg-5 ps-lg-5 pt-5 mt-5 pt-lg-0 mt-lg-0">
+                <p class="reservation-form-header">Located in the 8th arrondissement of Paris</p>
+                <p class="pt-3 reservation-form-content">
+                  <span class="fw-bolder">24 Avenue des Champs-Élysées</span><br />75008 Paris, France<br />+33 1 23 45 67 89<br />Trois-Champs-Élysées@gmail.com
+                </p>
+                <p class="reservation-form-header pt-5">Hours of Operation</p>
+                <p class="pt-3 reservation-form-content">
+                  <span class="fw-bolder">Monday to Saturday</span><br />5:30 pm
+                  to 10:00 pm<br /><span class="fw-bolder">Sunday</span
+                  ><br />6:00 pm to 11:00 pm
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reservation Modal -->
+
+    <!-- Hero -->
+
+    <section
+      class="d-flex min-vh-100 pt-5 mb-5"
+      lc-helper="background"
+      style="
+        background: url(../imgs/interior.png) center / cover no-repeat;
+        background-color: #262626;
+        background-blend-mode: overlay;
+      "
+    >
+      <div class="container align-self-center text-light">
+        <div class="lc-block mb-4 content text-left hero hidden">
+          <div editable="rich">
+            <h1 class="px-md-5 text-secondary text-uppercase hero-upper-line">
+              GASTRONOMY
+            </h1>
+            <h1 class="px-md-5 text-secondary text-uppercase">REDEFINED</h1>
+          </div>
+        </div>
+
+        <div class="lc-block hero hidden">
+          <div editable="rich">
+            <div class="row content">
+              <div class="col-md-5 hero-lower-line"></div>
+              <div class="col-md-3 order-md-first">
+                <p class="lead text-uppercase">
+                  <span style="color:#fbc65e;">Trois Champs-Élysées</span> Paris, France
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p class="lead text-md-end">
+                  Enhancing your culinary experience with a selection of global flavors, every plate expertly crafted to utter excellence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero -->
+
+    <!-- About Journey -->
+
+    <section class="container py-5">
+      <div class="row">
+        <div class="d-none d-lg-block col-lg-6 p-5 content about hidden">
+          <div class="lc-block img-line-top pr-2">
+            <span class="img-line-bottom"></span>
+            <img
+              class="img-fluid"
+              alt="Steak"
+              src="../imgs/steak.jpg"
+              style="height: 42.5rem; width: 100%; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6 ps-lg-5 pt-5 about hidden">
+          <!-- /lc-block -->
+          <div class="lc-block content mb-3 text-white px-md-3">
+            <div editable="rich">
+              <p class="lead text-uppercase about-line pb-3">About Us</p>
+              <h1 class="text-secondary text-uppercase">Our</h1>
+              <h1 class="text-secondary text-uppercase">Journey</h1>
+              <p class="mt-5 text-content text-justify">
+                Nestled away in northwest Paris, <span style="color:#fbc65e;">Trois Champs-Élysées</span> transcends the definition of a restaurant; it is a voyage through history, a festival of tastes, and a paragon of elegance. Our tale starts with a dream to craft a dining experience beyond nourishment, where each dish is an orchestration of tastes and each moment is treasured.
+              </p>
+            </div>
+          </div>
+          <div class="lc-block pt-5 px-md-3">
+            <button
+              type="button"
+              class="btn btn-lg-font btn-outlined"
+              onclick="window.location.href='/html/about.html'"
+            >
+              Contact Us
+            </button>
+          </div>
+          <!-- /lc-block -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Journey -->
+
+    <!-- Our Menu -->
+
+    <section class="py-5 mt-5 content">
+      <div class="container pt-5">
+        <div class="row justify-content-md-center content">
+          <div class="col">
+            <p class="mb-4 lead text-center text-uppercase service-line">
+              Culinary Symphony
+            </p>
+            <h2
+              class="mb-4 display-5 text-center text-secondary text-uppercase"
+            >
+              From Our Menu
+            </h2>
+            <p class="mb-5 text-center text-content">
+              Here lies a selection of culinary masterpieces, meticulously crafted by our skilled chefs with artistry and passion.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 p-4 menu hidden">
+            <div class="lc-block">
+              <img
+                class="img-fluid"
+                alt="Steak"
+                src="../imgs/vegitarian-risotto.jpg"
+                style="
+                  height: 22.5rem;
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: bottom;
+                "
+              />
+
+              <div class="row py-3">
+                <p class="col-6 lead text-uppercase text-start">
+                  RISOTTO VÉGÉTARIEN
+                </p>
+                <div
+                  class="d-flex col-6 align-items-center justify-content-end"
+                >
+                  <p class="text-secondary text-content"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 p-4 menu hidden">
+            <div class="lc-block">
+              <img
+                class="img-fluid"
+                alt="Steak"
+                src="../imgs/pan-seared-halibut.jpg"
+                style="
+                  height: 22.5rem;
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: bottom;
+                "
+              />
+
+              <div class="row py-3">
+                <p class="col-6 lead text-uppercase text-start">
+                  FILET DE FLÉTAN POÊLÉ
+                </p>
+                <div
+                  class="d-flex col-6 align-items-center justify-content-end"
+                >
+                  <p class="text-secondary text-content"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 p-4 mx-auto menu hidden">
+            <div class="lc-block">
+              <img
+                class="img-fluid"
+                alt="Steak"
+                src="../imgs/lobster-thermidol.jpg"
+                style="
+                  height: 22.5rem;
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: bottom;
+                "
+              />
+
+              <div class="row py-3">
+                <p class="col-6 lead text-uppercase text-start">
+                  Lobster Thermidor
+                </p>
+                <div
+                  class="d-flex col-6 align-items-center justify-content-end"
+                >
+                  <p class="text-secondary text-content"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lc-block pt-3 pb-5 px-md-3 justify-content-center d-flex">
+        <button
+          type="button"
+          class="btn btn-lg-font btn-outlined"
+          style="--bs-btn-font-size: 1rem"
+          onclick="window.location.href='/html/menu.html'"
+        >
+          View Full Menu
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <span class="rect-background"></span>
+    </section>
+
+    <!-- Our Menu -->
+
+    <!-- Information Section -->
+
+    <section class="container-fluid min-vh-100">
+      <div class="row min-vh-100">
+        <!-- Image column taking up the entire width -->
+
+        <div class="col-lg-6 px-0 image-responsive">
+          <img
+            src="../imgs/dining-experience.jpg"
+            class="img-fluid h-100"
+            style="object-fit: cover"
+            alt="Picture of a plate with food in a french fine dining restaurant"
+          />
+        </div>
+        <!-- Text column with default container padding -->
+        <div class="col-lg-6 order-lg-first my-5 py-5 px-5 my-lg-auto hidden">
+          <div class="col-12 mb-5 py-5 p-md-5 content">
+            <p class="text text-center dining-line">
+              Be it a special celebration, a business dinner, or a moment of indulgence, <span style="color:#fbc65e;">Trois Champs-Élysées</span> beckons you to savor the pinnacle of fine dining. Join us in crafting memories that are as exceptional as they are lasting.
+            </p>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="col-1 d-flex justify-content-center">
+              <i class="fa-regular fa-circle"></i>
+            </div>
+            <div class="col-1 d-flex justify-content-center">
+              <i class="fa-regular fa-circle"></i>
+            </div>
+            <div class="col-1 d-flex justify-content-center">
+              <i class="fa-regular fa-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Section -->
+
+    <!-- Chefs Info Section -->
+
+    <section class="chef-info">
+      <div class="container py-5 content">
+        <div class="row">
+          <!-- Image column taking up the entire width -->
+
+          <div
+            class="col-12 col-md-6 col-lg-3 py-5 d-none d-md-block image-responsive chef-section hidden"
+          >
+            <img
+              src="../imgs/searing-chef.png"
+              class="img-fluid h-100"
+              style="object-fit: cover"
+              alt="French Fine Dining Chef Searing Food"
+            />
+          </div>
+
+          <div
+            class="col-12 col-md-6 col-lg-3 py-5 d-none d-md-block image-responsive chef-section hidden"
+          >
+            <img
+              src="../imgs/whisking-chef.png"
+              class="img-fluid h-100"
+              style="object-fit: cover"
+              alt="Chef Whisking"
+            />
+          </div>
+
+          <!-- Text column with default container padding -->
+          <div
+            class="col-lg-6 my-5 ps-lg-5 my-auto content chef-section hidden"
+          >
+            <div class="content">
+              <p class="mb-4 lead text-center text-uppercase chef-service-line">
+                Our Chefs
+              </p>
+            </div>
+            <p class="text text-center">
+              For the ultimate dining experience, let our chef craft a bespoke tasting menu showcasing seasonal delights paired with exquisite wines.
+            </p>
+            <div class="d-flex justify-content-center pt-3">
+              <div class="col-1 d-flex justify-content-center">
+                <i class="fa-regular fa-circle"></i>
+              </div>
+              <div class="col-1 d-flex justify-content-center">
+                <i class="fa-regular fa-circle"></i>
+              </div>
+              <div class="col-1 d-flex justify-content-center">
+                <i class="fa-regular fa-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chefs Info Section -->
+
+    <!-- Reservation Section -->
+
+    <section>
+      <div
+        class="d-flex flex-column align-items-center justify-content-center text-center reservation-section"
+      >
+        <h4 class="text-uppercase mb-5 text-secondary">Reserve Your Table</h4>
+        <button
+          type="button"
+          class="btn btn-lg-font btn-secondary"
+          data-bs-toggle="modal"
+          data-bs-target="#reservation-modal"
+        >
+          Reserve Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+
+    <!-- Footer -->
+
+
+    <footer class="text-lg-start text-muted">
+      <!-- Section: Links  -->
+      <section class="py-5 text-white">
+        <div class="container text-md-start mt-5">
+          <!-- Grid row -->
+
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-12 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase mb-4">
+                Trois <span class="text-secondary">Champs</span> Élysées
+              </h6>
+              <p style="font-size: 1.125rem">
+                © 2023 Trois Champs-Élysées. All rights reserved.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-12 col-lg-auto mb-4 container-fluid mx-auto">
+              <div class="content">
+                <div class="footer-divider">
+                  <!-- Links -->
+                  <p class="text-uppercase fw-bold mb-4 footer-text-header">
+                    Follow Us
+                  </p>
+                  <div class="row">
+                    <div class="mb-4 col-3">
+                      <button class="btn-circle">
+                        <i class="fa-brands fa-yelp fa-xl"></i>
+                      </button>
+                    </div>
+                    <div class="mb-4 col-3">
+                      <button class="btn-circle">
+                        <i class="fa-brands fa-facebook-f fa-xl"></i>
+                      </button>
+                    </div>
+                    <div class="mb-4 col-3">
+                      <button class="btn-circle">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                      </button>
+                    </div>
+                    <div class="mb-4 col-3">
+                      <button class="btn-circle">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-12 col-lg-3 mx-auto mb-4">
+              <!-- Links -->
+              <p
+                class="text-uppercase fw-bold mb-4 footer-text-header text-wrap"
+              >
+                Contact Us
+              </p>
+              <p class="my-1 text-secondary fw-bold footer-contact-us">Phone</p>
+              <p class="my-1 text-white footer-contact-us">+33 1 23 45 67 89</p>
+              <p class="my-1 text-secondary fw-bold footer-contact-us">Email</p>
+              <p class="my-1 text-wrap text-white footer-contact-us">
+                Champs-Élysées@gmail.com
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4 text-muted">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="index.html"
+          >Trois Champs-Élysées</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Footer -->
+
+    <!-- Bootstrap 5 Javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Animations -->
+    <script defer src="../js/animation.js"></script>
+  </body>
+</html>

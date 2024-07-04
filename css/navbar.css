@@ -1,0 +1,21 @@
+.navbar {
+    box-shadow: var(--shadow-elevation-high);
+}
+
+.nav-link:hover,
+.active{
+    color: #D4AA54 !important;
+    
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+    
+}
+
+#offcanvasNavbarLabel {
+    font-size: 20px;
+}
